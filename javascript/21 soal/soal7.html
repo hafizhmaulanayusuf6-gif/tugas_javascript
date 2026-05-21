@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = 8.3;
+        const c = "3.2";
+
+        document.write(`${a} + ${parseFloat(c)} = ${(a + parseFloat(c))}<br>`);
+        document.write(`${a} - ${parseFloat(c)} = ${(a - parseFloat(c)).toFixed(1)}<br>`);
+        document.write(`${a} * ${parseFloat(c)} = ${(a * parseFloat(c)).toFixed(2)}<br>`);
+        document.write(`${a} / ${parseFloat(c)} = ${(a / parseFloat(c))}<br>`);
+        document.write(`${a} % ${parseInt(c)} = ${(a % parseInt(c)).toFixed()}`);
+
+        console.log(`${a} + ${parseFloat(c)} = ${(a + parseFloat(c))}`);
+        console.log(`${a} - ${parseFloat(c)} = ${(a - parseFloat(c)).toFixed(1)}`);
+        console.log(`${a} * ${parseFloat(c)} = ${(a * parseFloat(c)).toFixed(2)}`);
+        console.log(`${a} / ${parseFloat(c)} = ${(a / parseFloat(c))}`);
+        console.log(`${a} % ${parseInt(c)} = ${(a % parseInt(c)).toFixed()}`);
+    </script>
+</body>
+</html>
