@@ -1,20 +1,16 @@
-function konversiDetik(totalDetik) {
-    // Math.floor digunakan untuk membulatkan angka ke bawah
-    const hari = Math.floor(totalDetik / 86400);
-    const sisaSetelahHari = totalDetik % 86400;
-    
-    const jam = Math.floor(sisaSetelahHari / 3600);
-    const sisaSetelahJam = sisaSetelahHari % 3600;
-    
-    const menit = Math.floor(sisaSetelahJam / 60);
-    const detik = sisaSetelahJam % 60;
+const prompt = require('prompt-sync')({ sigint: true});
 
-    return { hari, jam, menit, detik };
-}
+let totalDetik, hari, jam, menit, detik, sisa;
 
-// Contoh Penggunaan Inputan:
-let inputDetik = 400000; // Misalnya 400.000 detik
-let hasil = konversiDetik(inputDetik);
+totalDetik = parseInt(prompt('masukan jumlah detik: '));
 
-console.log(`${inputDetik} detik sama dengan: 
-${hasil.hari} hari, ${hasil.jam} jam, ${hasil.menit} menit, dan ${hasil.detik} detik.`);
+hari = Math.floor(totalDetik / 86400);
+sisa = totalDetik % 86400;
+
+jam = Math.floor(sisa / 3600);
+sisa = sisa % 3600;
+
+menit = Math.floor(sisa / 60);
+detik = sisa % 60;
+
+console.log(`${hari} hari ${jam} jam ${menit} menit ${detik} detik`);
