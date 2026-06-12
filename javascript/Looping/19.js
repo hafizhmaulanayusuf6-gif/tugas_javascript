@@ -1,8 +1,5 @@
 const prompt = require('prompt-sync')({ sigint: true });
 
-
-
-
 let arr = [];
 
 while (true) {
@@ -11,9 +8,9 @@ while (true) {
         break;
     } 
 
-    let anggka = parseFloat(pilihan);
-    if (isNaN(pilihan)) {
-        arr.push[anggka]
+    let anggka = parseInt(pilihan);
+    if (!isNaN(pilihan)) {
+        arr.push(anggka)
     } else {
         console.log('input salah');
     }
@@ -27,5 +24,6 @@ if (arr.length > 0) {
     }
 
     let rataRata = jumlah / arr.length;
+    console.log(arr)
     console.log(`Rata-rata nilai    : ${rataRata}`);
 }
